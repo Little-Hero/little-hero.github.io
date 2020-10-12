@@ -138,6 +138,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-vue-cli3及以上代理问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/vue-cli3%E5%8F%8A%E4%BB%A5%E4%B8%8A%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/">vue-cli3及以上代理问题</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/12/vue-cli3%E5%8F%8A%E4%BB%A5%E4%B8%8A%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-10-12T01:47:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这两天一直在配置vue的配置文件,把我整的头很大,所以在这里记录一哈</p>
+<p>因为我这个项目是新创建的项目,配置的也是vue-cli3的配置<br>首先用vue-cli3创建的项目是没有配置文件的,需要自行创建,创建vue.config.js文件后<br>项目运行会自行加载此文件</p>
+<p>当前端需要对后端进行访问时,通常都会遇上跨域问题,这时只需要在<code>vue.config.js</code>中的devServer<br>下的<code>proxy</code>中配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#39;&#x2F;api&#39;: &#123;</span><br><span class="line">  target: &#39;http:&#x2F;&#x2F;192.168.3.215:8888&#39;, &#x2F;&#x2F;需要请求的地址</span><br><span class="line">  changeOrigin: true, &#x2F;&#x2F; 在本地会创建一个虚拟服务端，然后发送请求的数据，并同时接收请求的数据，这样服务端和服务端进行数据的交互就不会有跨域问题</span><br><span class="line">  ws: true,</span><br><span class="line">  pathRewrite: &#123;</span><br><span class="line">    &#39;^&#x2F;api&#39;: &#39;&#x2F;&#39;  &#x2F;&#x2F; 替换target中的请求地址，也就是说以后你在请求http:&#x2F;&#x2F;192.168.3.215:8888这个地址的时候直接写成&#x2F;api即可</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里的<code>&#39;/api/&#39;</code>记得一定要用<code>&#39;&#39;</code>单引号单引号单引号</p>
+<p>我这两天算是踩坑了,之后就能正常访问到后端数据,但是在<code>netword</code>查看时是<code>localhost:8080/api/user</code>但是实际上已经<code>http://192.168.3.215:8888/api/user</code><br>发送了请求</p>
+<p><a href="https://blog.csdn.net/weixin_44194732/article/details/106228824?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank">VueCli3.0配置proxy解决跨域</a></p>
+<p>这算是我看到写的特别详细的</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue.config.js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/12/vue-cli3%E5%8F%8A%E4%BB%A5%E4%B8%8A%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-小程序分享踩雷" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -949,6 +1035,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开始</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue.config.js</a>
               </li>
             
             <div class="clearfix"></div>
