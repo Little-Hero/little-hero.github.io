@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Litter Hero</title>
+  <title>加强JS基础 | Litter Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Litter Hero">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="如果不是本质是前端，建议不用太过学习js基础，会增删改查，但是想做一名资深前端开发，那基础必须得是杠杠的；说白了，就是为了拿更多工资，提高自身的学习能力  下面开始分享我的心得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="加强JS基础">
+<meta property="og:url" content="http://yoursite.com/2021/03/12/%E5%8A%A0%E5%BC%BAJS%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Litter Hero">
+<meta property="og:description" content="如果不是本质是前端，建议不用太过学习js基础，会增删改查，但是想做一名资深前端开发，那基础必须得是杠杠的；说白了，就是为了拿更多工资，提高自身的学习能力  下面开始分享我的心得">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdn.net/20171220225635912?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzM1NjkwNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="article:published_time" content="2021-03-12T02:27:26.741Z">
+<meta property="article:modified_time" content="2021-03-12T04:07:14.965Z">
 <meta property="article:author" content="Litter Hero">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20171220225635912?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzM1NjkwNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="Litter Hero" type="application/atom+xml">
   
@@ -136,64 +143,208 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-加强JS基础" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/19/%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E8%B5%B7%E6%AD%A5/" class="archive-article-date">
-  	<time datetime="2020-01-19T10:00:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/19/%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E8%B5%B7%E6%AD%A5/">第一篇：起步</a>
+    <h1 class="article-title" itemprop="name">
+      加强JS基础
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/03/12/%E5%8A%A0%E5%BC%BAJS%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2021-03-12T02:27:26.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 如果不是本质是前端，建议不用太过学习js基础，会增删改查，但是想做一名资深前端开发，那基础必须得是杠杠的；说白了，就是为了拿更多工资，提高自身的学习能力</p>
+<p> 下面开始分享我的心得<br> <a id="more"></a></p>
+<p> 在面试前端开发时，闭包，原型链，递归都是常见的面试题，当然，如果你掌握了，其实就会发现，搞懂他们都不是难事，难的是你能利用它去开发，自己用它去写个库，更甚是给他人用</p>
+<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p>​    百科的解释：闭包就是能够读取其他函数内部变量的函数。例如在javascript中，只有函数内部的函数才能读取局部变量，所以闭包可以理解成“定义在一个函数内部的函数”</p>
+<p>​    当我们需要使用某个函数中的变量，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">fnChild</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      a++</span><br><span class="line">      <span class="built_in">console</span>.log(a);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> fnChild</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    这其实就是个闭包，那他怎么使用呢，👇</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = fn()</span><br><span class="line">f(); <span class="comment">//3</span></span><br><span class="line">f(); <span class="comment">//4...</span></span><br></pre></td></tr></table></figure>
+
+<p>​    作用是什么呢 =&gt; 可以在函数外部操作或获取函数内部的变量和函数</p>
+<p>​    为什么会这样呢，原因是js的垃圾回收机制，function函数执行完都会被垃圾回收机制回收，释放，但是在闭包中，他不会被回收，就达到了反复利用的作用；在我理解中，它是这样的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = fn()</span><br></pre></td></tr></table></figure>
+
+<p>​    这时候创建了一个变量，变量存在了栈中，而栈中被释放了才会回收</p>
+<p>​    在<script></script>中，有个”window”属性，也是”this”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      a++</span><br><span class="line">      <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      a++</span><br><span class="line">      <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    fn1() <span class="comment">// 1</span></span><br><span class="line">    fn2() <span class="comment">// 2</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    这其实也相当于一种闭包；只是上例中”fn”函数变成了”window”对象：我们这里利用的变量a就是”fn”函数中的变量a，而”fnChildren”操作的a就是”fn”函数的变量a，等同于我们在<script></script>操作了”window”的变量a，这样说是不是就很清晰明了。</p>
+<p>当然，这是我个人理解，如有错，各位大神可以指出。</p>
+<hr>
+<h4 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h4><p>递归在开发还是比较常见的，使用也很简单：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	num++</span><br><span class="line">	<span class="keyword">if</span>(num &gt; <span class="number">100</span>)&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(num)</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		retrun fn()</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
+
+<p>​    这其实就是个递归，当然，这只是个简单的例子，常见例子中，多级菜单，权限设置列表很常见就是条件不满足自调用，就其实就是一种递归</p>
+<hr>
+<h4 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h4><p>​    这个说起来其实挺困难，理解起来很绕，大概说一下，我们在创建function的时候，是会有一个 <span style='color:red'> protoType</span>，这个叫做显示原型，一开始听可能会有点绕，我尽量解释清楚</p>
+<p><img src="https://img-blog.csdn.net/20171220225635912?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzM1NjkwNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>​    只要我们创建一个函数，该函数就会自动获得一个prototype属性，这个属性指向函数的原型对象，该属性是一个对象即该函数的原型对象，我们可以看到原型对象默认会有一个constructor属性，该属性是指向函数自身即fn。</p>
+<p>参考CSDN：<a href="https://blog.csdn.net/u013356907/article/details/78858557" target="_blank" rel="noopener">https://blog.csdn.net/u013356907/article/details/78858557</a></p>
+<p> 先吃饭</p>
+<p>后续，我在完善</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/skm/1579422056561.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/skm/mm_facetoface_collect_qrcode_1579422081467.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开始</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/03/12/%E5%8A%A0%E5%BC%BAJS%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/10/12/vue-cli3%E5%8F%8A%E4%BB%A5%E4%B8%8A%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue-cli3及以上代理问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -216,8 +367,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
